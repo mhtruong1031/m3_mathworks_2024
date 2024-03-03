@@ -1,0 +1,9 @@
+from math import sqrt
+
+def rsquareCI (R2, n, k):
+    SE = sqrt((4*R2*((1-R2)**2)*((n-k-1)**2))/((n**2-1)*(n + 3)))
+    upper = R2 + SE
+    lower = R2 - SE
+    print("CI upper boundary:{}, CI lower boundary:{}".format(upper, lower))
+
+rsquareCI(R2 = 0.995579433185004, n = 7, k = 3)
